@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Methodes<Static> {
+    private static float i,j,r,rente;
+    static Scanner scan = new Scanner(System.in);
+    public static void main(String[] args){
+
+        HelloWorld();
+        groet();
+        groet("Jeffrey!");
+
+        System.out.println("Voer in beginbedrag:");
+        i = scan.nextFloat();
+        System.out.println("Voer in uw tijdperiode (bijv 10 maanden):");
+        j = scan.nextFloat();
+        System.out.println("Voer in maandrente:");
+        r = scan.nextFloat();
+        scan.close();
+        rente = (i*j)/100;
+        System.out.println("De rente over "+j+" jaar is "+rente+"");
+System.out.println("Uw eindbedrag is na "+j+" jaar "+(rente+i));
+    }
+    static void HelloWorld () {
+        System.out.println("HelloWorld");
+    }
+    static void groet () {
+        System.out.println("Hallo gebruiker!");
+    }
+    static void groet (String gebruiker){
+        System.out.println(gebruiker);
+    }
+}
